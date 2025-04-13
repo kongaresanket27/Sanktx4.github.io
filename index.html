@@ -50,8 +50,7 @@
       justify-content: space-between;
       height: calc(100vh - 80px);
       padding: 40px 60px;
-      background: #000 url("sanket-profile.jpg") no-repeat right center;
-      background-size: contain;
+      background: #000;
     }
 
     .text {
@@ -69,6 +68,17 @@
       color: #ccc;
     }
 
+    .image-container {
+      max-width: 45%; /* Adjusts the width of the image container */
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 100%; /* Make sure the image fits within the container */
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 255, 204, 0.1);
+    }
+
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
@@ -79,6 +89,11 @@
 
       .text {
         max-width: 100%;
+      }
+
+      .image-container {
+        margin-top: 20px;
+        max-width: 80%; /* Adjust image size on smaller screens */
       }
     }
   </style>
@@ -100,6 +115,10 @@
     <div class="text animate__animated animate__fadeInLeft">
       <h1>Sanket Kongare</h1>
       <p>Code Enthusiast and Problem Solver</p>
+    </div>
+
+    <div class="image-container animate__animated animate__fadeInRight">
+      <img src="sanket-profile.jpg" alt="Sanket Kongare" />
     </div>
   </section>
 
