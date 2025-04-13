@@ -7,11 +7,23 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     body {
-      background-color: #000;
+      background: url('https://wallpapercave.com/wp/wp2583402.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.75); /* Dark overlay for contrast */
+      z-index: -1;
     }
 
     nav {
@@ -52,6 +64,9 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
     }
 
     .form-group {
@@ -110,7 +125,7 @@
   </header>
 
   <section class="contact">
-    <h1>Contact Me</h1>
+     <h1>Contact Me</h1>
     <p>📞 8275841327</p>
     <p>✉️ 202401040057@gmail.com</p>
     <p>📍 Alandi,pune</p>
@@ -133,3 +148,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+  
+   
