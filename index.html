@@ -47,14 +47,27 @@
     .hero {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       height: calc(100vh - 80px);
       padding: 40px 60px;
-      background: #000;
+      background: url('/mnt/data/sanket-profile.jpg') no-repeat center center/cover;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Overlay for text readability */
     }
 
     .text {
-      max-width: 50%;
+      position: relative;
+      z-index: 1;
+      text-align: center;
     }
 
     .text h1 {
@@ -68,32 +81,18 @@
       color: #ccc;
     }
 
-    .image-container {
-      max-width: 45%; /* Adjusts the width of the image container */
-      text-align: center;
-    }
-
-    .image-container img {
-      width: 100%; /* Make sure the image fits within the container */
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 255, 204, 0.1);
-    }
-
     @media (max-width: 768px) {
       .hero {
-        flex-direction: column;
-        background: #000;
-        text-align: center;
         padding: 60px 20px;
+        text-align: center;
       }
 
-      .text {
-        max-width: 100%;
+      .text h1 {
+        font-size: 36px;
       }
 
-      .image-container {
-        margin-top: 20px;
-        max-width: 80%; /* Adjust image size on smaller screens */
+      .text p {
+        font-size: 18px;
       }
     }
   </style>
@@ -112,13 +111,9 @@
   </header>
 
   <section class="hero">
-    <div class="text animate__animated animate__fadeInLeft">
+    <div class="text animate__animated animate__fadeInUp">
       <h1>Sanket Kongare</h1>
       <p>Code Enthusiast and Problem Solver</p>
-    </div>
-
-    <div class="image-container animate__animated animate__fadeInRight">
-      <img src="images/sanket-profile.jpg" alt="Sanket Kongare" />
     </div>
   </section>
 
