@@ -6,6 +6,40 @@
   <title>Contact Me</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00ffcc;
+    }
+
     .contact {
       text-align: center;
       padding: 40px 20px;
@@ -33,25 +67,33 @@
     input,
     textarea {
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #444;
       border-radius: 6px;
       font-size: 16px;
+      background-color: #111;
+      color: #fff;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #bbb;
     }
 
     button {
       padding: 10px;
       font-size: 16px;
-      background-color: #007bff;
-      color: white;
+      background-color: #00ffcc;
+      color: #000;
       border: none;
       border-radius: 6px;
       cursor: pointer;
       width: 120px;
       align-self: center;
+      font-weight: bold;
     }
 
     button:hover {
-      background-color: #0056b3;
+      background-color: #00ccaa;
     }
   </style>
 </head>
@@ -71,17 +113,17 @@
     <h1>Contact Me</h1>
     <p>📞 8275841327</p>
     <p>✉️ 202401040057@gmail.com</p>
-    <p>📍 Alandi, Pune</p>
+    <p>📍 Alandi,pune</p>
     <p>🌐 mitaoe.ac.in</p>
     <form action="https://formspree.io/f/movepkwg" method="POST" class="contact-form">
       <div class="form-group">
         <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" placeholder="example@email.com" required />
       </div>
 
       <div class="form-group">
         <label for="message">Your Message:</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
+        <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
       </div>
 
       <button type="submit">Send</button>
@@ -91,5 +133,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
