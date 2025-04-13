@@ -1,32 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00ffcc;
+    }
+
+    .about {
+      position: relative;
+      padding: 100px 20px;
+      min-height: 100vh;
+      color: #fff;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #000;
+    }
+
+    .about::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/mnt/data/sanket.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1; /* Subtle visibility */
+      z-index: 0;
+      transition: transform 2s ease;
+    }
+
+    .about:hover::before {
+      transform: scale(1.05); /* Interactive zoom effect */
+    }
+
+    .about h2,
+    .about p {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .about h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="about">
-         <div class="about">
+  <section class="about">
     <h2>About Me</h2>
     <p>Hi, I'm <strong>Sanket Kongare</strong>, a Computer Engineering student at <strong>MITAOE, Pune</strong>.</p>
     <p>I'm passionate about technology, software development, and problem-solving. I enjoy learning new programming languages and exploring innovative solutions to everyday challenges.</p>
     <p>I love to contribute to meaningful projects that create a positive impact on society while continuously expanding my knowledge.</p>
-  </div>
-    </section>
-
-    <script src="script.js"></script>
+  </section>
 </body>
 </html>
